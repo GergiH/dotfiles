@@ -10,7 +10,13 @@ call plug#begin("~/.vim/plugged")
 call plug#end()
 
 "Config Section
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=2                           " Insert 2 spaces for a tab
+set shiftwidth=2                        " Change the number of space characters inserted for indentation
+set expandtab                           " Converts tab characters to spaces
+set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+set number                              " Line numbers                               
+set cursorline                          " Enable highlighting of the current line
+
 if (has("termguicolors"))
  set termguicolors
 endif
