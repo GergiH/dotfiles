@@ -1,6 +1,7 @@
 call plug#begin("~/.vim/plugged")
   " Plugin Section
   Plug 'dracula/vim'
+  Plug 'morhetz/gruvbox'
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -14,14 +15,16 @@ set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set expandtab                           " Converts tab characters to spaces
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set number                              " Line numbers                               
+set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
+set relativenumber                      " Relative line numbers
 
+set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme dracula
+colorscheme gruvbox
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
