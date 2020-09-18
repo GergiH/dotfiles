@@ -19,7 +19,7 @@ set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set relativenumber                      " Relative line numbers
 
-set background=light                    " light mode for gruvbox, dark is default
+"set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
  set termguicolors
 endif
