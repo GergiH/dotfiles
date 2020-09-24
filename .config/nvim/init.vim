@@ -3,7 +3,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'
   Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
+  Plug 'airblade/vim-gitgutter'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -58,6 +61,10 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" custom mappings
+nmap <C-o> <plug>NERDCommenterToggle
+vmap <C-o> <plug>NERDCommenterToggle
 
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
