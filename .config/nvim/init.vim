@@ -2,6 +2,7 @@ call plug#begin("~/.vim/plugged")
   " Plugin Section
   Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'
+  Plug 'rakr/vim-one'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -22,12 +23,12 @@ set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set relativenumber                      " Relative line numbers
 
-"set background=light                    " light mode for gruvbox, dark is default
+set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme gruvbox
+colorscheme one
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
