@@ -8,6 +8,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ryanoasis/vim-devicons'
   Plug 'airblade/vim-gitgutter'
+  Plug 'sbdchd/neoformat'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -66,6 +67,7 @@ nnoremap <A-l> <C-w>l
 " custom mappings
 nmap <C-o> <plug>NERDCommenterToggle
 vmap <C-o> <plug>NERDCommenterToggle
+nmap <C-m> :Neoformat<CR>
 
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
