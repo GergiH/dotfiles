@@ -2,10 +2,12 @@ call plug#begin("~/.vim/plugged")
   " Plugin Section
   Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'
+  Plug 'lifepillar/vim-gruvbox8'
   Plug 'rakr/vim-one'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'kien/ctrlp.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'airblade/vim-gitgutter'
   Plug 'sbdchd/neoformat'
@@ -23,6 +25,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
 set relativenumber                      " Relative line numbers
+set mouse=a                             " Mouse selection won't include line numbers and such
 
 "set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
@@ -30,7 +33,7 @@ if (has("termguicolors"))
 endif
 syntax enable
 "colorscheme one
-colorscheme gruvbox
+colorscheme gruvbox8_hard
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
