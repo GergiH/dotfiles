@@ -5,6 +5,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'rakr/vim-one'
   Plug 'arcticicestudio/nord-vim'
+  Plug 'vim-airline/vim-airline'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
