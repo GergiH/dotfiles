@@ -4,6 +4,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'morhetz/gruvbox'
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'rakr/vim-one'
+  Plug 'arcticicestudio/nord-vim'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -14,7 +15,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pairs']
 call plug#end()
 
 "Config Section
@@ -34,6 +35,7 @@ endif
 syntax enable
 "colorscheme one
 colorscheme gruvbox8_hard
+"colorscheme nord
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
