@@ -5,6 +5,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'rakr/vim-one'
   Plug 'arcticicestudio/nord-vim'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'sonph/onehalf'
   Plug 'vim-airline/vim-airline'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
@@ -45,7 +47,7 @@ let g:NERDTreeStatusline = ''
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle<CR>
 
 " open new split panes to right and below
 set splitright
