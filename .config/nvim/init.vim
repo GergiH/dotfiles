@@ -2,9 +2,10 @@ set langmenu=en_US
 let $LANG = 'en_US'
 set columns=184 lines=46
 set colorcolumn=100
+set guifont=JetBrains\ Mono:h11
 "set guifont=Roboto\ Mono:h11
 "set guifont=Go\ Mono:h10
-set guifont=Fira\ Code:h11
+"set guifont=Fira\ Code:h11
 "set guifont=Cascadia\ Code\ PL:h10
 "set guifont=Hack:h9
 
@@ -18,6 +19,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'arcticicestudio/nord-vim'
   Plug 'lifepillar/vim-solarized8'
   Plug 'sonph/onehalf'
+  Plug 'sainnhe/sonokai'
   Plug 'vim-airline/vim-airline'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
@@ -42,12 +44,13 @@ set cursorline                          " Enable highlighting of the current lin
 set relativenumber                      " Relative line numbers
 set mouse=a                             " Mouse selection won't include line numbers and such
 
-set background=light                    " light mode for gruvbox, dark is default
+"set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme one
+colorscheme sonokai
+"colorscheme one
 "colorscheme gruvbox8_hard
 "colorscheme nord
 "colorscheme solarized8
