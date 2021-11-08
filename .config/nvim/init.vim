@@ -1,13 +1,5 @@
-set langmenu=en_US
-let $LANG = 'en_US'
-set columns=184 lines=46
-set colorcolumn=100
-set guifont=JetBrains\ Mono:h11
-"set guifont=Roboto\ Mono:h11
-"set guifont=Go\ Mono:h10
-"set guifont=Fira\ Code:h11
-"set guifont=Cascadia\ Code\ PL:h10
-"set guifont=Hack:h9
+set guifont=Roboto\ Mono:h11
+"set lines=40 columns=135
 
 call plug#begin("~/.vim/plugged")
   " Plugin Section
@@ -15,11 +7,9 @@ call plug#begin("~/.vim/plugged")
   Plug 'morhetz/gruvbox'
   Plug 'lifepillar/vim-gruvbox8'
   Plug 'rakr/vim-one'
-  Plug 'pgavlin/pulumi.vim'
   Plug 'arcticicestudio/nord-vim'
-  Plug 'lifepillar/vim-solarized8'
-  Plug 'sonph/onehalf'
   Plug 'sainnhe/sonokai'
+  Plug 'rose-pine/neovim'
   Plug 'vim-airline/vim-airline'
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
@@ -41,7 +31,7 @@ set expandtab                           " Converts tab characters to spaces
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
-set relativenumber                      " Relative line numbers
+"set relativenumber                      " Relative line numbers
 set mouse=a                             " Mouse selection won't include line numbers and such
 
 "set background=light                    " light mode for gruvbox, dark is default
@@ -49,12 +39,10 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme sonokai
 "colorscheme one
 "colorscheme gruvbox8_hard
-"colorscheme nord
-"colorscheme solarized8
-"colorscheme onehalflight
+"colorscheme sonokai
+colorscheme rose-pine
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -63,7 +51,7 @@ let g:NERDTreeStatusline = ''
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
-nmap <F2> :NERDTreeToggle<CR>
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
 " open new split panes to right and below
 set splitright
