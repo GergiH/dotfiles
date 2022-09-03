@@ -1,11 +1,22 @@
-# dotfiles
-Totally random dotfiles, mostly initial configs, rarely updated.
+# GergiH dotfiles
 
-## neovim
-- put the `init.vim` into `~/.config/nvim/`
-- install Plugin Manager `curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-- install `sudo apt install silversearcher-ag`
-- run `nvim +PlugInstall`
+Totally random dotfiles, mostly default configs, recently Neovim is the only one used from these, rarely updated.
+
+## Neovim
+
+1. Copy the `init.vim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
+2. Install the Plugin Manager from `https://github.com/junegunn/vim-plug`
+3. Run `:PlugInstall`
+4. Run `:checkhealth telescope` and install the dependencies
+
+### Custom keybinds
+
+- `Ctrl + /` - Comment toggle
+- `Ctrl + m` - Format with Neoformat (not really working most of the time, better config needed prob.)
+- `\ff` - Find file with Telescope
+- `\fg` - Grep in files with Telescope
+- `\fb` - Find buffer with Telescope
 
 ## kitty
+
 Install the themes first from https://github.com/dexpota/kitty-themes

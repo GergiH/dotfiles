@@ -1,25 +1,22 @@
-set guifont=Roboto\ Mono:h11
+" Settings relevant only for GUI versions
+"set guifont=Hack:h11
 "set lines=40 columns=135
 
 call plug#begin("~/.vim/plugged")
   " Plugin Section
-  Plug 'dracula/vim'
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
   Plug 'morhetz/gruvbox'
-  Plug 'lifepillar/vim-gruvbox8'
-  Plug 'rakr/vim-one'
   Plug 'arcticicestudio/nord-vim'
   Plug 'sainnhe/sonokai'
-  Plug 'rose-pine/neovim'
   Plug 'vim-airline/vim-airline'
-  Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'airblade/vim-gitgutter'
   Plug 'sbdchd/neoformat'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-pairs']
 call plug#end()
@@ -31,41 +28,23 @@ set expandtab                           " Converts tab characters to spaces
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
-"set relativenumber                      " Relative line numbers
+set colorcolumn=100
+set relativenumber                      " Relative line numbers
 set mouse=a                             " Mouse selection won't include line numbers and such
 
 "set background=light                    " light mode for gruvbox, dark is default
 if (has("termguicolors"))
  set termguicolors
 endif
+
 syntax enable
-"colorscheme one
-"colorscheme gruvbox8_hard
-"colorscheme sonokai
-colorscheme rose-pine
 
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-" Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+let g:sonokai_style = 'espresso'
+let g:sonokai_better_performance = 1
 
-" open new split panes to right and below
-set splitright
-set splitbelow
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+"colorscheme gruvbox
+colorscheme sonokai
+"colorscheme nord
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -78,15 +57,12 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 " custom mappings
-nmap <C-o> <plug>NERDCommenterToggle
-vmap <C-o> <plug>NERDCommenterToggle
+nmap <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle
 nmap <C-m> :Neoformat<CR>
 
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Telescope (file tree)
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
