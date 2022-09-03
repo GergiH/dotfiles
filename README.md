@@ -11,6 +11,8 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 
 ![image](https://user-images.githubusercontent.com/30079559/188262512-be5abb27-ba59-4388-872f-4013885e058b.png)
 
+(Font used in screenshot: [Rec Mono Casual](https://www.recursive.design/))
+
 ### Custom keybinds
 
 - `Ctrl + /` - Comment toggle
