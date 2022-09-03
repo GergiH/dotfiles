@@ -9,6 +9,8 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 3. Run `:PlugInstall`
 4. Run `:checkhealth telescope` and install the dependencies
 
+![image](https://user-images.githubusercontent.com/30079559/188261525-4085c941-e9a1-4094-b1c1-b36c27c9e7c5.png)
+
 ### Custom keybinds
 
 - `Ctrl + /` - Comment toggle
