@@ -5,7 +5,7 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 ## Neovim
 
 1. Copy the `init.vim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
-2. Install the Plugin Manager from `https://github.com/junegunn/vim-plug`
+2. Install the Plugin Manager from [Vim-Plug](https://github.com/junegunn/vim-plug)
 3. Run `:PlugInstall`
 4. Run `:checkhealth telescope` and install the dependencies
 
