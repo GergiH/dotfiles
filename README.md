@@ -4,9 +4,11 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 
 ## Neovim
 
-1. Copy the `init.vim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
-2. Install the Plugin Manager from [Vim-Plug](https://github.com/junegunn/vim-plug)
-3. Run `:PlugInstall`
+1. Copy the contents of `nvim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
+2. Install Packer from [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
+3. Install Node.js
+4. Install C Compiler with `sudo apt install build-essential`
+3. Run `:PackerSync`
 4. Run `:checkhealth telescope` and install the dependencies
 
 ![image](https://user-images.githubusercontent.com/30079559/188262512-be5abb27-ba59-4388-872f-4013885e058b.png)
@@ -15,8 +17,7 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 
 ### Custom keybinds
 
-- `Ctrl + /` - Comment toggle
-- `Ctrl + m` - Format with Neoformat (not really working most of the time, better config needed prob.)
+- `gc` - Comment toggle
 - `\ff` - Find file with Telescope
 - `\fg` - Grep in files with Telescope
 - `\fb` - Find buffer with Telescope
