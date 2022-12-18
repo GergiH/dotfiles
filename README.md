@@ -5,7 +5,7 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 ## Neovim
 
 1. Copy the contents of `nvim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
-2. Install Packer from [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
+2. Install [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
 3. Install Node.js
 4. Install C Compiler with `sudo apt install build-essential`
 3. Run `:PackerSync`
