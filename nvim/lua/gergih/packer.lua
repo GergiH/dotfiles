@@ -13,7 +13,9 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     
+    use { "ellisonleao/gruvbox.nvim" }
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "overcache/NeoSolarized" }
 
     -- 'gc' Linewise-comment, 'gb' Blockwise-comment
     use {
