@@ -40,7 +40,7 @@ vim.g.mapleader = " "
 require("lazy").setup({
     --"ellisonleao/gruvbox.nvim",
     --"rebelot/kanagawa.nvim",
-    "oxfist/night-owl.nvim",
+    --"oxfist/night-owl.nvim",
     {
         "nvim-lua/plenary.nvim",
         name = "plenary"
