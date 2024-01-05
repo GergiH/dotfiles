@@ -73,5 +73,10 @@ require("lazy").setup({
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
+    },
+    -- Code completion
+    {
+        "neoclide/coc.nvim",
+        branch = "release"
     }
 })
