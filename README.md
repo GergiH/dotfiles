@@ -5,22 +5,11 @@ Totally random dotfiles, mostly default configs, recently Neovim is the only one
 ## Neovim
 
 1. Copy the contents of `nvim` into `~/.config/nvim/` on Linux, or `~/AppData/Local/nvim/` on Windows
-2. Install [Packer](https://github.com/wbthomason/packer.nvim#quickstart)
-3. Install Node.js
-4. Install C Compiler with `sudo apt install build-essential`
-3. Run `:PackerSync`
-4. Run `:checkhealth telescope` and install the dependencies
-
-![image](https://user-images.githubusercontent.com/30079559/188262512-be5abb27-ba59-4388-872f-4013885e058b.png)
-
-(Font used in screenshot: [Rec Mono Casual](https://www.recursive.design/))
-
-### Custom keybinds
-
-- `gc` - Comment toggle
-- `\ff` - Find file with Telescope
-- `\fg` - Grep in files with Telescope
-- `\fb` - Find buffer with Telescope
+2. Install Node.js
+3. Install C Compiler with `sudo apt install build-essential` or through MinGW on Windows
+4. Run `:checkhealth nvim-treesitter` and install dependencies if needed
+5. Run `:checkhealth telescope` and install the dependencies if needed
+6. Run `:TSInstall <langname>` for treesitter (language names can be found in its docs)
 
 ## kitty
 
