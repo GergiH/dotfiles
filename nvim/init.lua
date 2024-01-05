@@ -50,13 +50,11 @@ require("lazy").setup({
         dependencies = {
             "plenary"
         },
-        config = function()
-            local builtin = require("telescope.builtin")
-            vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-            vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-            vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-            --vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-        end
+        keys = {
+            { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope file searcher" },
+            { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope grep in files" },
+            { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffer switcher" }
+        }
     },
     {
         "rose-pine/neovim",
