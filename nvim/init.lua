@@ -29,11 +29,14 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.listchars = { space = "·", tab = ">~" }
 -- end
 
 
 -- custom keybinds
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>LS", "<cmd>set list<cr>", {})
+vim.keymap.set("n", "<leader>LH", "<cmd>set nolist<cr>", {})
 -- end
 
 
