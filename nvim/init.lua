@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
--- end
+-- end - lazy.nvim bootstrapper
 
 
 -- generic settings
@@ -30,27 +30,26 @@ vim.opt.writebackup = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.listchars = { space = "·", tab = ">~" }
--- end
+-- end - generic settings
 
 
 -- custom keybinds
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>LS", "<cmd>set list<cr>", {})
 vim.keymap.set("n", "<leader>LH", "<cmd>set nolist<cr>", {})
--- end
+-- end - custom keybinds
+
+vim.cmd("colorscheme kanagawa")
 
 require("lazy").setup({
     -- themes
     --"ellisonleao/gruvbox.nvim",
-    --"rebelot/kanagawa.nvim",
+    "rebelot/kanagawa.nvim",
     --"oxfist/night-owl.nvim",
-    {
-        "rose-pine/neovim",
-        name = "rose-pine",
-        config = function()
-            vim.cmd("colorscheme rose-pine")
-        end
-    },
+    --{
+    --    "rose-pine/neovim",
+    --    name = "rose-pine"
+    --},
     -- end - themes
 
     -- file/buffer switcher, searcher
