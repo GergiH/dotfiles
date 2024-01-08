@@ -39,17 +39,19 @@ vim.keymap.set("n", "<leader>LS", "<cmd>set list<cr>", {})
 vim.keymap.set("n", "<leader>LH", "<cmd>set nolist<cr>", {})
 -- end - custom keybinds
 
-vim.cmd("colorscheme kanagawa")
 
 require("lazy").setup({
     -- themes
     --"ellisonleao/gruvbox.nvim",
-    "rebelot/kanagawa.nvim",
+    --"rebelot/kanagawa.nvim",
     --"oxfist/night-owl.nvim",
-    --{
-    --    "rose-pine/neovim",
-    --    name = "rose-pine"
-    --},
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            vim.cmd("colorscheme rose-pine")
+        end
+    },
     -- end - themes
 
     -- file/buffer switcher, searcher
