@@ -28,7 +28,6 @@ vim.opt.termguicolors = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.ignorecase = true
-vim.opt.smartcase = true
 vim.opt.listchars = { space = "·", tab = ">~" }
 -- end - generic settings
 
