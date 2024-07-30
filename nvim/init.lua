@@ -29,6 +29,7 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.ignorecase = true
 vim.opt.listchars = { space = "·", tab = ">~" }
+vim.opt.clipboard = 'unnamedplus' -- use global clipboard for yank / paste
 -- end - generic settings
 
 
@@ -36,21 +37,36 @@ vim.opt.listchars = { space = "·", tab = ">~" }
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>LS", "<cmd>set list<cr>", {})
 vim.keymap.set("n", "<leader>LH", "<cmd>set nolist<cr>", {})
+-- black hole register for Change commands
+local changeoptions = { noremap = true, silent = true }
+vim.keymap.set('v', 'c', '"_c', changeoptions)
+vim.keymap.set('v', 'C', '"_C', changeoptions)
+vim.keymap.set('n', 'c', '"_c', changeoptions)
+vim.keymap.set('n', 'C', '"_C', changeoptions)
 -- end - custom keybinds
 
 
 require("lazy").setup({
     -- themes
     --"ellisonleao/gruvbox.nvim",
-    --"rebelot/kanagawa.nvim",
-    --"oxfist/night-owl.nvim",
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        "rebelot/kanagawa.nvim",
+        priority = 1000,
         config = function()
-            vim.cmd("colorscheme rose-pine")
+            vim.cmd("colorscheme kanagawa")
+            vim.cmd([[highlight Normal guibg=NONE]])
+            vim.cmd([[highlight NonText guibg=NONE]])
+            vim.cmd([[highlight SignColumn guibg=NONE]])
         end
     },
+    --"oxfist/night-owl.nvim",
+    --{
+    --    "rose-pine/neovim",
+    --    name = "rose-pine",
+    --    config = function()
+    --        vim.cmd("colorscheme rose-pine")
+    --    end
+    --},
     -- end - themes
 
     -- file/buffer switcher, searcher
