@@ -49,59 +49,17 @@ vim.keymap.set('n', 'C', '"_C', changeoptions)
 require("lazy").setup({
     -- themes
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        "ellisonleao/gruvbox.nvim",
+        lazy = false,
         priority = 1000,
+        opts = {
+            contrast = "hard"
+        },
         config = function()
-            require("catppuccin").setup({
-                flavour = "macchiato", -- latte, frappe, macchiato, mocha
-            })
-
-            vim.cmd("colorscheme catppuccin")
-            --vim.cmd([[highlight Normal guibg=NONE]])
-            --vim.cmd([[highlight NonText guibg=NONE]])
-            --vim.cmd([[highlight SignColumn guibg=NONE]])
+            vim.cmd("colorscheme gruvbox")
         end
     },
-    --{
-    --    "rebelot/kanagawa.nvim",
-    --    priority = 1000,
-    --    config = function()
-    --        vim.cmd("colorscheme kanagawa")
-    --        vim.cmd([[highlight Normal guibg=NONE]])
-    --        vim.cmd([[highlight NonText guibg=NONE]])
-    --        vim.cmd([[highlight SignColumn guibg=NONE]])
-    --    end
-    --},
     -- end - themes
-
-    -- file/buffer switcher, searcher
-    {
-        "nvim-lua/plenary.nvim",
-        name = "plenary"
-    },
-
-    {
-        "nvim-telescope/telescope.nvim",
-        dependencies = {
-            "plenary"
-        },
-        keys = {
-            { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope file searcher" },
-            { "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Telescope file searcher" },
-            { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope grep in files" },
-            { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffer switcher" }
-        },
-        config = function()
-            require("telescope").setup({
-                defaults = {
-                    -- hide C# and JS build folders
-                    file_ignore_patterns = { "obj", "bin", "node_modules" }
-                }
-            })
-        end
-    },
-    -- end - file/buffer switcher, searcher
 
     -- better syntax highlighting
     {
@@ -109,21 +67,6 @@ require("lazy").setup({
         build = ":TSUpdate"
     },
     -- end - better syntax highlighting
-
-    -- file tree
-    {
-        "nvim-neo-tree/neo-tree.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- optional
-            "MunifTanjim/nui.nvim"
-        },
-        keys = {
-            { "<leader>e", ":Neotree toggle float<cr>", silent = true, desc = "Float file tree" },
-            { "<leader><tab>", ":Neotree toggle left<cr>", silent = true, desc = "Left file tree" }
-        }
-    },
-    -- end - file tree
 
     -- LSP
     {
