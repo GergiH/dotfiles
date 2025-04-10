@@ -43,6 +43,7 @@ vim.keymap.set('v', 'c', '"_c', changeoptions)
 vim.keymap.set('v', 'C', '"_C', changeoptions)
 vim.keymap.set('n', 'c', '"_c', changeoptions)
 vim.keymap.set('n', 'C', '"_C', changeoptions)
+vim.keymap.set('v', 'p', 'P', { noremap = true })
 -- end - custom keybinds
 
 
