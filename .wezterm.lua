@@ -30,14 +30,15 @@ config.window_background_image_hsb = {
 config.initial_rows = 33
 config.initial_cols = 125
 
-config.font = wezterm.font('Noto Sans Mono', { weight = 'Medium' })
+config.font = wezterm.font('IBM Plex Mono', { weight = 'Regular' })
 config.font_size = 11.0
 
 --config.enable_tab_bar = false
 config.tab_bar_at_bottom = true
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Kanagawa (Gogh)'
+--config.color_scheme = 'Solarized Dark - Patched'
+config.color_scheme = 'zenbones'
 
 config.default_prog = { 'powershell.exe' }
 
