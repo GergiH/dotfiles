@@ -102,4 +102,13 @@ require("lazy").setup({
         end
     },
     -- end - file tree
+
+    -- cool stuff
+    {
+        "sphamba/smear-cursor.nvim",
+        config = function()
+            require('smear_cursor').enabled = true
+        end
+    },
+    -- end - cool stuff
 })
