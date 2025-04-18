@@ -9,6 +9,8 @@ config.window_frame = {
     font = wezterm.font { family = "Inter" }
 }
 
+config.max_fps = 144
+
 config.window_background_image = '<path to bg image>'
 config.window_background_image_hsb = {
   -- Darken the background image by reducing it to 1/3rd
