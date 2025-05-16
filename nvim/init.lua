@@ -111,4 +111,15 @@ require("lazy").setup({
         end
     },
     -- end - cool stuff
+
+    -- tabs, toolbars, panels
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("bufferline").setup{}
+        end
+    },
+    -- end - tabs, toolbars, panels
 })
